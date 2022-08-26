@@ -1,0 +1,31 @@
+Репозиторий:
+https://github.com/DorofeevKonstantin/1
+
+Материалы по Си:
+книги:
+Керниган Ритчи - Язык программирования Cи
+Стивен Прата - Язык программирования Си
+Харбисон Стил - Язык Си с примерами
+Дейтел - Как программировать на Си
+Бен Клеменс - Язык Си в 21 веке
+\\dc1\doc\books\computing\prog\ЯП\C
+
+Youtube: любые каналы по Си на русском и английском, например:
+Тимофей Хирьянов С,Python,C++.
+Канал Фоксфорд.
+Евгений Линский C++ (но большая часть записей именно по Си).
+https://compscicenter.ru/
+
+Где можно попрактиковаться, порешать задачи, посмотреть примеры решений:
+https://www.codewars.com/
+https://silvertests.ru/
+https://acm.timus.ru
+https://codeforces.com/
+https://informatics.msk.ru/
+https://leetcode.com/
+https://acmp.ru/
+https://techstudy.org/clanguage/c-programming-example-and-solutions
+https://www.studytonight.com/c/programs/
+https://codeforwin.org/c-programming-examples-exercises-solutions-beginners
+https://www.w3resource.com/c-programming-exercises/
+https://younglinux.info/c/
