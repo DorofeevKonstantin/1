@@ -5,12 +5,10 @@
 #define SIZE 11 // global scope macros
 
 // make function from repeating code in main
-void output_array(int* mass) // discuss "int*" later
+void printArray(int* mass)
 {
 	for (int i = 0; i < SIZE; ++i)
-	{
 		printf("%d ", mass[i]);
-	}
 	printf("\n");
 }
 
@@ -21,12 +19,10 @@ int main()
 	int mass[SIZE];
 	int count_odd = 0, count_even = 0;
 	int max = INT_MIN, min = INT_MAX;
-	// set values
+	// generate values
 	for (int i = 0; i < SIZE; ++i)
-	{
-		mass[i] = rand() % 100; // 0...99
-	}
-	output_array(mass);
+		mass[i] = rand() % 100; // [0 ... 99]
+	printArray(mass); // mass == &mass[0]
 	for (int i = 0; i < SIZE; ++i)
 	{
 		if (mass[i] % 2 == 0)
@@ -53,7 +49,7 @@ int main()
 		mass[i] = mass[SIZE - 1 - i];
 		mass[SIZE - 1 - i] = tmp;
 	}
-	output_array(mass);
+	printArray(mass);
 	// bubble sort
 	for (int i = 0; i < SIZE; ++i) // SIZE times we will move the bubble up
 	{
@@ -68,14 +64,14 @@ int main()
 			}
 		}
 	}
-	output_array(mass);
+	printArray(mass);
 	// count duplicates
-	int count_duplicates = 0;
+	int countDuplicates = 0;
 	for (int i = 0; i < SIZE - 1; ++i)
 	{
 		if (mass[i] == mass[i + 1])
-			++count_duplicates;
+			++countDuplicates;
 	}
-	printf("count_duplicates = %d\n", count_duplicates);
+	printf("countDuplicates = %d\n", countDuplicates);
 	return 0;
 }
