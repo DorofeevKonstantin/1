@@ -66,7 +66,7 @@ int main(void) {
     scanf_s("%u", &student.tails);
 
     printf_s("There 3 students:\n");
-    printStudent(alexandr);
+    //printStudent(alexandr);
     printStudent(petr);
     printStudent(student);
 

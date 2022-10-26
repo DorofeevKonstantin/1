@@ -4,7 +4,6 @@
 // https://docs.microsoft.com/en-us/cpp/c-language/arguments-to-main?view=msvc-160
 int main(int argc, char* argv[], char* envp[])
 {
-	//printf_s("%d\n", (~(-9) >> 2) ^ 3);
 	printf_s("argc == %d\n", argc);
 	for (int i = 0; i < argc; i++)
 	{

@@ -14,6 +14,8 @@ unsigned long long factorial(unsigned number);
 // пример рекурсивной функции вычисления длины строки 
 size_t stringLength(char* string);
 
+// https://informatics.msk.ru/mod/statements/view.php?id=253&chapterid=156#1
+
 int main(void) {
     printf_s("Enter a number: ");
     char buf[STR_BUF_SIZE + 1];

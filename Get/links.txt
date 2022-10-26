@@ -1,9 +1,39 @@
 Репозиторий:
 https://github.com/DorofeevKonstantin/1
 
-Материалы по Си:
-книги:
-Керниган Ритчи - Язык программирования Cи
+Материалы по Си.
+КНИГИ:
+C Programming Language, 2nd Edition: Brian W. Kernighan, Dennis M. Ritchie
+
+Beginning C: From Novice to Professional: Ivor Horton
+C Programming: A Modern Approach, 2nd Edition: K. N. King
+Эти две книги — более детальные альтернативы, если изложение K&R кажется слишком сжатым
+
+Expert C Programming: Deep C Secrets: Peter van der Linden
+Очень глубокое погружение
+
+C Interfaces and Implementations: Techniques for Creating Reusable Software: Hanson, David
+Немного о том как люди виртуозно используют макросы и void*. 
+Один раз надо этому научиться чтобы с одной стороны больше так не делать, 
+а с другой стороны всегда и везде видеть эту альтернативу
+
+прикладные вещи:
+
+TCP/IP Sockets in C: Practical Guide for Programmers: Michael J. Donahoo, Kenneth L. Calvert
+Фундаментальный труд по сокетам и сетевому программированию.
+Выучить до знакомства с boost::asio
+
+Numerical Linear Approximation in C: Nabih Abdelmalek, William A. Malek
+Линейная алгебра, линейное программирование и линейное счастье
+
+Algorithms in C: Robert Sedgewick
+Книга ученика Дональда Кнута, очень неплохая
+
+Image Processing in C:  Dwayne Phillips
+Древняя и наивная но приятная книга про обработку изображений на CPU
+
+Numerical Recipes in C (коллектив авторов)
+
 Стивен Прата - Язык программирования Си
 Харбисон Стил - Язык Си с примерами
 Дейтел - Как программировать на Си
