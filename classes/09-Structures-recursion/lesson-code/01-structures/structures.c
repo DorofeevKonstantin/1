@@ -38,7 +38,7 @@ struct Car {
 #define MAX_NAME_LENGTH 15
 #define NAME_BUF_SIZE MAX_NAME_LENGTH + 1
 
-struct  Client {
+struct Client {
     char name[NAME_BUF_SIZE];
     unsigned phone;
     // наша структура Car - тип данных, поэтому мы можем использовать её
@@ -112,7 +112,6 @@ int main(void) {
     struct Parking myParking;
     initParking(&myParking);
     while (mainMenu(&myParking));
-
     return 0;
 }
 
@@ -236,12 +235,14 @@ void removeClient(struct Parking* parking, unsigned phone) {
     struct Client* clientPtr = findClient(parking, phone);
     if (clientPtr == NULL) return;
     --parking->clientsNumber;
-    unsigned shiftsCount = (unsigned)(parking->clientsNumber - (clientPtr - parking->clients));
+    unsigned shiftsCount = (unsigned)(parking->clientsNumber - 
+        (clientPtr - parking->clients));
     // кошмар по производительности, так делать не нужно никогда:
     for (unsigned i = 0; i < shiftsCount; ++i) {
         initClient(clientPtr, (clientPtr + 1)->name, (clientPtr + 1)->phone, &(clientPtr + 1)->car);
         ++clientPtr;
     }
+    // TODO : last client ???
 }
 
 void addCar(struct Parking* parking, unsigned regNumber) {
