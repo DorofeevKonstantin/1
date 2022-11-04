@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-#include "utils.h"
+#include "math.h"
+
+// 1.brain limitations (logic,view,ii,network)
+// 2.several developers
+// 3.build speed (compilation + linking)
 
 int main()
 {
@@ -8,6 +12,6 @@ int main()
 	// modul in c == utils.h + utils.c
 	
 	// call function
-	hello_world(6);
+	bigIntMult("1223143241234123413243", "456536895078200000578");
 	return 0;
 }

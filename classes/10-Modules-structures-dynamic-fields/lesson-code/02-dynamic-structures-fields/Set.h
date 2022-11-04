@@ -3,9 +3,9 @@
 #include <stdbool.h>
 
 struct IntegerSet {
-    int* data;
-    size_t size;
-    size_t maxSize;
+	int* data;
+	size_t size;
+	size_t maxSize;
 };
 
 typedef struct IntegerSet Set;
