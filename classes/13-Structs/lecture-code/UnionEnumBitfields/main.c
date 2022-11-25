@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-struct flags
+struct fileOperationsFlag
 {
 	unsigned char is_read : 1;
 	unsigned char is_write : 1;
@@ -26,15 +26,15 @@ enum day
 	sunday
 };
 
-typedef struct flags FLAGS;
+typedef struct fileOperationsFlag FLAGS;
 typedef union symbol SYMBOL;
 typedef enum day DAY;
 
-struct field
+struct cell
 {
 	unsigned char cells : 8; // need to implement operations for work with bits
 };
-typedef struct field FIELD;
+typedef struct cell CELL;
 
 void flagsExample()
 {
@@ -48,6 +48,7 @@ void flagsExample()
 void symbolExample()
 {
 	SYMBOL s;
+	size_t bytes = sizeof(s);
 	s.cValue = 'F';
 	printf_s("sizeof (union) = %lu , value = %c\n", sizeof(s), s.cValue);
 	s.iValue = 55;
@@ -57,6 +58,7 @@ void symbolExample()
 void dayExample()
 {
 	DAY day = friday;
+	size_t bytes = sizeof(DAY);
 	printf_s("Now is day : %d\n", day);
 	printf_s("Enter day number:\n");
 	scanf_s("%d", &day);
@@ -71,15 +73,15 @@ void dayExample()
 void fieldsExample()
 {
 	// implement field 80x80 (6400 cells) on stack memory
-	printf_s("sizeof (struct FIELD) = %lu\n", sizeof(FIELD));
-	FIELD gameFieldStack[800]; // 8 cells in each
+	printf_s("sizeof (struct CELL) = %lu\n", sizeof(CELL));
+	CELL gameFieldStack[800]; // 8 cells in each
 	char simpleFieldStack[80][80];
 	printf_s("sizeof (gameFieldStack) = %lu b\nsizeof (simpleFieldStack) = %lu kb \n", sizeof(gameFieldStack), sizeof(simpleFieldStack) / 1024);
 
 	// implement field 1000x1000 (1'000'000 cells) on heap memory
 	unsigned int dynamicFieldSize = 1000;
-	FIELD* gameFieldHeap = (FIELD*)malloc(((dynamicFieldSize * dynamicFieldSize) / 8 + 1) * sizeof(FIELD));
-	unsigned int memoryUsed = sizeof(void*) + ((dynamicFieldSize * dynamicFieldSize) / 8 + 1) * sizeof(FIELD);
+	CELL* gameFieldHeap = (CELL*)malloc(((dynamicFieldSize * dynamicFieldSize) / 8 + 1) * sizeof(CELL));
+	unsigned int memoryUsed = sizeof(void*) + ((dynamicFieldSize * dynamicFieldSize) / 8 + 1) * sizeof(CELL);
 	printf_s("sizeof (gameFieldHeap) = %lu kb\n", memoryUsed / 1024);
 	char** simpleFieldHeap = (char**)malloc(dynamicFieldSize * sizeof(char*));
 	memoryUsed = sizeof(void*) + dynamicFieldSize * sizeof(char*);

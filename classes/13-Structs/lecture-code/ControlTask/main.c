@@ -2,8 +2,8 @@
 
 //int mass[] = { 9,8,7,6,5,4,3,2,1 };
 //int value = 7;
-//int pos = unknownFunction(mass, 0, 8, value);
-int unknownFunction(int* mass, int l, int r, int value)
+//int pos = binarySearchNotRecursive(mass, 0, 8, value);
+int binarySearchNotRecursive(int* mass, int l, int r, int value)
 {
 	int pos = -1;
 	while (l < r)
