@@ -34,11 +34,9 @@ void test2()
 	linkedList* l1 = createList();
 	addRandom(l1, 20);
 	printList(l1);
-	removeAllValues(l1, 0);
-	printf_s("after remove all 0 : \n");
-	printList(l1);
-	removeAllValues(l1, 1);
-	printf_s("after remove all 1 : \n");
+	for (int i = 0; i < 15; i++)
+		removeAllValues(l1, i);
+	printf_s("after removes [0-14]\n");
 	printList(l1);
 	printReverseList(l1);
 	destroyList(l1);
@@ -59,8 +57,8 @@ void palindromeCheck()
 int main()
 {
 	srand((unsigned int)time(0));
-	//test1();
-	//test2();
+	test1();
+	test2();
 	palindromeCheck();
 	return 0;
 }

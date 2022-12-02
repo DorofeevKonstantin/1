@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "linkedList.h"
-#include "..\..\..\16-Stack\lecture-code\Stack\stack.h"
+//#include "..\..\..\16-Stack\lecture-code\Stack\stack.h"
 
 linkedList* createList()
 {
@@ -36,12 +36,12 @@ linkedList* copyList(linkedList* src)
 void destroyList(linkedList* l)
 {
 	node* current = l->head;
-	node* tmp;
+	node* currentNext;
 	while (current != 0)
 	{
-		tmp = current->next;
+		currentNext = current->next;
 		free(current);
-		current = tmp;
+		current = currentNext;
 	}
 	free(l);
 }
@@ -80,6 +80,7 @@ void pushFront(linkedList* l, int newValue)
 	}
 }
 // https://titanwolf.org/Network/Articles/Article?AID=76013240-79e8-4cb5-8f83-f49e97e4b646
+// broken tail
 void removeAllValues(linkedList* l, int removedValue)
 {
 	node** current = &(l->head);
@@ -110,9 +111,7 @@ void printList(linkedList* l)
 void addRandom(linkedList* l, size_t count)
 {
 	for (size_t i = 0; i < count; i++)
-	{
 		pushBack(l, rand() % count);
-	}
 }
 void printReverseNodes(node* n)
 {
@@ -163,16 +162,15 @@ int popBack(linkedList* l)
 		l->tail->next = 0;
 	return result;
 }
-// not ideal realization, need error handling mechanism
 int popFront(linkedList* l)
 {
 	int value = 0;
 	if (l && l->head)
 	{
 		value = l->head->value;
-		node* tmp = l->head;
+		node* headCopy = l->head;
 		l->head = l->head->next;
-		free(tmp);
+		free(headCopy);
 		l->size--;
 	}
 	else
@@ -186,6 +184,15 @@ int front(linkedList* l)
 		value = l->head->value;
 	else
 		printf_s("warning : empty linkedList front.\n");
+	return value;
+}
+int back(linkedList* l)
+{
+	int value = 0;
+	if (l && l->tail)
+		value = l->tail->value;
+	else
+		printf_s("warning : empty linkedList back.\n");
 	return value;
 }
 int getMiddleElem(linkedList* l)

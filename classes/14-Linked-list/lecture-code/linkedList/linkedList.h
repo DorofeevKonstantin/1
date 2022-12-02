@@ -19,6 +19,7 @@ struct LinkedList
 
 typedef struct LinkedList linkedList;
 
+// not ideal realization, need error handling mechanism
 linkedList* createList();
 linkedList* copyList(linkedList* src);
 void pushBack(linkedList*, int);
@@ -27,6 +28,7 @@ void addRandom(linkedList*, size_t);
 int popBack(linkedList*);
 int popFront(linkedList*);
 int front(linkedList*);
+int back(linkedList*);
 void removeAllValues(linkedList*, int);
 void printList(linkedList*);
 void reverseList(linkedList*);
