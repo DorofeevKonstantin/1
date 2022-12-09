@@ -19,7 +19,7 @@ void test1()
 	printList(l);
 
 	swap(l, getNode(l, size - 1), getNode(l, size));
-	printf_s("after swap(position %lu, position %lu) : \n", size - 1, size);
+	printf_s("after swap(position %zu, position %zu) : \n", size - 1, size);
 	printList(l);
 
 	sort(l, 1);
@@ -42,7 +42,7 @@ void test2(int direction)
 {
 	printf_s("test2 : \nEnter list size : \n");
 	size_t size;
-	scanf_s("%lu", &size);
+	scanf_s("%zu", &size);
 	if (size > 0 && size < 1'000'000)
 	{
 		list* l = createList();

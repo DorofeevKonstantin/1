@@ -143,7 +143,10 @@ void swap(list* l, node* left, node* right)
 		return;
 	}
 	if (left == right)
+	{
 		printf_s("warning : wouldn't swap node with itself\n");
+		return;
+	}
 
 	if (left->next == right)
 		swapLeftBeforeRight(l, left, right);

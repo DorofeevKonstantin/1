@@ -4,7 +4,7 @@
 #include "linkedList.h"
 #include "list.h"
 
-// https://github.com/Ginmaru-Gin/csu-lang-C/blob/main/14-Linked-list/task/task.md  task 14.4
+// task 14.4
 
 void getNValues(list* l, size_t n)
 {
