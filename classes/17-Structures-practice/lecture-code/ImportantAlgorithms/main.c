@@ -173,11 +173,11 @@ void gcdExample()
 
 int main()
 {
-	//digitsSumExample();
-	//binarySearchExample();
-	//rotate90Example();
-	////getMiddleElem();
-	//fastPowerExample();
+	digitsSumExample();
+	binarySearchExample();
+	rotate90Example();
+	//getMiddleElem();
+	fastPowerExample();
 	gcdExample();
 	return 0;
 }

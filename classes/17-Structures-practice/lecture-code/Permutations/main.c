@@ -10,7 +10,7 @@ size_t getPermutations(linkedList* alphabet, linkedList* upLevelPermutation)
 	{
 		printList(upLevelPermutation);
 		++count;
-		destroyList(upLevelPermutation);
+		//destroyList(upLevelPermutation);
 		return count;
 	}
 	for (size_t i = 0; i < alphabet->size; i++)
@@ -20,6 +20,7 @@ size_t getPermutations(linkedList* alphabet, linkedList* upLevelPermutation)
 		pushBack(downLevelPermutation, detachedValue);
 		getPermutations(alphabet, downLevelPermutation);
 		pushBack(alphabet, detachedValue);
+		//destroyList(downLevelPermutation); ???
 	}
 	return count;
 }

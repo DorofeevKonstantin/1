@@ -35,15 +35,18 @@ linkedList* copyList(linkedList* src)
 }
 void destroyList(linkedList* l)
 {
-	node* current = l->head;
-	node* currentNext;
-	while (current != 0)
+	if (l)
 	{
-		currentNext = current->next;
-		free(current);
-		current = currentNext;
+		node* current = l->head;
+		node* currentNext;
+		while (current != 0)
+		{
+			currentNext = current->next;
+			free(current);
+			current = currentNext;
+		}
+		free(l);
 	}
-	free(l);
 }
 void pushBack(linkedList* l, int newValue)
 {
