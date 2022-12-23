@@ -74,9 +74,7 @@ void sortLinkedListExample(linkedList** l)
 	sortLinkedListWithStacks(l);
 	stopTimeMeasure(start);
 	if ((*l)->size < maxPrintSize)
-	{
 		printList(*l);
-	}
 }
 
 int simpleCompare(const void* lhs, const void* rhs)
